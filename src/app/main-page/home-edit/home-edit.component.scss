@@ -1,0 +1,109 @@
+.spinner {
+    position: fixed;
+    margin-top: -20rem;
+    height: 120%;
+    width: 100%;
+    z-index: 100000;
+    background-color: rgb(204, 204, 204, 0.2);
+    &__loading {
+        position: absolute;
+        top: 55%;
+        left: 46%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.alertBox {
+    margin: 0 5rem 0 5rem;
+    font-size: 1.6rem;
+    text-align: center;
+    button {
+        font-size: 2rem;
+    }
+}
+
+.form {
+    font-size: 1.7rem;
+    overflow: hidden;
+    input {
+        font-size: 1.6rem;
+        text-align: right;
+        direction: rtl;
+        // border: 2px solid #f0f0f0;
+    }
+    &__control {
+        position: relative;
+        i {
+            position: absolute;
+            left: 11px;
+            bottom: 9px;
+            visibility: hidden;
+        }
+        input.ng-invalid.ng-touched {
+            border: 2px solid #e74c3c;
+        }
+        input.ng-invalid.ng-touched~i.fa-exclamation-circle {
+            color: #e74c3c;
+            visibility: visible;
+        }
+        input.ng-valid.ng-touched {
+            border: 2px solid #2ecc71;
+        }
+        input.ng-valid.ng-touched~i.fa-check-circle {
+            color: #2ecc7a;
+            visibility: visible;
+        }
+    }
+    &__span {
+        font-size: 1.2rem;
+    }
+    &__text {
+        text-align: center;
+    }
+    &__info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__right,
+    &__left {
+        width: 40%;
+        text-align: right;
+    }
+    &__img {
+        width: 100%;
+        // background-color: darkcyan;
+        display: flex;
+        text-align: right;
+        justify-content: space-evenly;
+        @media(max-width: 1200px) {
+            // flex-direction: column;
+            flex-wrap: wrap;
+        }
+        &--group {
+            width: 24%;
+            // background-color: darkgoldenrod;
+            @media(max-width: 1200px) {
+                width: 50%;
+            }
+            @media(max-width:694px) {
+                width: 100%;
+            }
+        }
+    }
+    &__btn {
+        width: 50%;
+        text-align: center;
+        margin: auto;
+        @media (max-width: 625px) {
+            width: 100%;
+        }
+        // background-color: yellow;
+        button {
+            font-size: 1.7rem;
+            padding: .5rem 2rem;
+            // background-color: #d31335;
+            margin-right: 2rem;
+        }
+    }
+}
